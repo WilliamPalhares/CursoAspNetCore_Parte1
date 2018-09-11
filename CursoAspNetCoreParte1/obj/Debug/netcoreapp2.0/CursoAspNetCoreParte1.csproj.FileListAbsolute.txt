@@ -1,0 +1,11 @@
+D:\Curso_Alura\C#\CursoAspNetCoreParte1\CursoAspNetCoreParte1\bin\Debug\netcoreapp2.0\CursoAspNetCoreParte1.deps.json
+D:\Curso_Alura\C#\CursoAspNetCoreParte1\CursoAspNetCoreParte1\bin\Debug\netcoreapp2.0\CursoAspNetCoreParte1.runtimeconfig.json
+D:\Curso_Alura\C#\CursoAspNetCoreParte1\CursoAspNetCoreParte1\bin\Debug\netcoreapp2.0\CursoAspNetCoreParte1.runtimeconfig.dev.json
+D:\Curso_Alura\C#\CursoAspNetCoreParte1\CursoAspNetCoreParte1\bin\Debug\netcoreapp2.0\CursoAspNetCoreParte1.dll
+D:\Curso_Alura\C#\CursoAspNetCoreParte1\CursoAspNetCoreParte1\bin\Debug\netcoreapp2.0\CursoAspNetCoreParte1.pdb
+D:\Curso_Alura\C#\CursoAspNetCoreParte1\CursoAspNetCoreParte1\obj\Debug\netcoreapp2.0\CursoAspNetCoreParte1.csprojResolveAssemblyReference.cache
+D:\Curso_Alura\C#\CursoAspNetCoreParte1\CursoAspNetCoreParte1\obj\Debug\netcoreapp2.0\CursoAspNetCoreParte1.csproj.CoreCompileInputs.cache
+D:\Curso_Alura\C#\CursoAspNetCoreParte1\CursoAspNetCoreParte1\obj\Debug\netcoreapp2.0\CursoAspNetCoreParte1.AssemblyInfoInputs.cache
+D:\Curso_Alura\C#\CursoAspNetCoreParte1\CursoAspNetCoreParte1\obj\Debug\netcoreapp2.0\CursoAspNetCoreParte1.AssemblyInfo.cs
+D:\Curso_Alura\C#\CursoAspNetCoreParte1\CursoAspNetCoreParte1\obj\Debug\netcoreapp2.0\CursoAspNetCoreParte1.dll
+D:\Curso_Alura\C#\CursoAspNetCoreParte1\CursoAspNetCoreParte1\obj\Debug\netcoreapp2.0\CursoAspNetCoreParte1.pdb
