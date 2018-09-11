@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using CursoAspNetCoreParte1.Models;
 using Microsoft.EntityFrameworkCore;
+using CursoAspNetCoreParte1.Repositories;
 
 namespace CursoAspNetCoreParte1
 {
@@ -28,6 +29,9 @@ namespace CursoAspNetCoreParte1
             services.AddDbContext<ApplicationContext>(op => op.UseMySql(Connection));
 
             services.AddMvc();
+
+            services.AddTransient<IDataService, DataService>();
+            services.AddTransient<IProdutoRepository, ProdutoRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -52,7 +56,7 @@ namespace CursoAspNetCoreParte1
                     template: "{controller=Pedido}/{action=Carrossel}/{id?}");
             });
 
-            ser.GetService<ApplicationContext>().Database.MigrateAsync();
+            ser.GetService<IDataService>().InicializaDB();
         }
     }
 }
