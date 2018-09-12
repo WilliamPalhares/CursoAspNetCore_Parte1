@@ -32,8 +32,13 @@ namespace CursoAspNetCoreParte1.Controllers
             return View(produtoRepository.GetProduto());
         }
 
-        public IActionResult Carrinho()
+        public IActionResult Carrinho(string codigo)
         {
+            if (!string.IsNullOrEmpty(codigo))
+            {
+                pedidoRepository.AddItem(codigo);
+            }
+
             Pedido pedido = pedidoRepository.GetPedido(); 
             return View(pedido.Itens);
         }
