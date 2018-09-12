@@ -1,4 +1,5 @@
 ﻿using CursoAspNetCoreParte1.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,20 +7,25 @@ using System.Threading.Tasks;
 
 namespace CursoAspNetCoreParte1.Repositories
 {
-    public class ProdutoRepository : IProdutoRepository
+    public class ProdutoRepository : BaseRepository<Produto>, IProdutoRepository
     {
-        private readonly ApplicationContext context;
-
-        public ProdutoRepository(ApplicationContext context)
+        public ProdutoRepository(ApplicationContext context) : base(context)
         {
-            this.context = context;
+        }
+
+        public IEnumerable<Produto> GetProduto()
+        {
+            return dbSet.ToList();
         }
 
         public void SaveProdutos(List<Livro> livros)
         {
             foreach (Livro l in livros)
             {
-                context.Set<Produto>().Add(new Produto(l.Codigo, l.Nome, l.Preco));
+                if (!dbSet.Where(c => c.Codigo == l.Codigo).Any())
+                {
+                    dbSet.Add(new Produto(l.Codigo, l.Nome, l.Preco));
+                }                
             }
 
             context.SaveChanges();
