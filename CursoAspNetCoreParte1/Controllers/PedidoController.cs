@@ -12,7 +12,6 @@ namespace CursoAspNetCoreParte1.Controllers
 {
     public class PedidoController : Controller
     {
-        private IConfiguration _configuration;
         private readonly IProdutoRepository produtoRepository;
         private readonly IPedidoRepository pedidoRepository;
 
@@ -21,12 +20,7 @@ namespace CursoAspNetCoreParte1.Controllers
             this.produtoRepository = produtoRepository;
             this.pedidoRepository = pedidoRepository;
         }
-
-        public PedidoController(IConfiguration Configuration)
-        {
-            _configuration = Configuration;
-        }
-
+       
         public IActionResult Carrossel()
         {
             return View(produtoRepository.GetProduto());

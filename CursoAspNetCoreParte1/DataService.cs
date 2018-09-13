@@ -1,5 +1,6 @@
 ﻿using CursoAspNetCoreParte1.Models;
 using CursoAspNetCoreParte1.Repositories;
+using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
@@ -19,15 +20,15 @@ namespace CursoAspNetCoreParte1
 
         public void InicializaDB()
         {
-            context.Database.EnsureCreatedAsync();
+            context.Database.Migrate();
             List<Livro> livros = GetLivros();
             produtoRepository.SaveProdutos(livros);
         }
 
         private static List<Livro> GetLivros()
         {
-            var json = File.ReadAllTextAsync(@"Data\livros.json");
-            var livros = JsonConvert.DeserializeObject<List<Livro>>(json.Result);
+            var json = File.ReadAllText(@"Data\livros.json");
+            var livros = JsonConvert.DeserializeObject<List<Livro>>(json);
             return livros;
         }
     }

@@ -24,14 +24,14 @@ namespace CursoAspNetCoreParte1
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var Connection = Configuration["ConexaoMySql:MySqlConnectionString"];
-
-            services.AddDbContext<ApplicationContext>(op => op.UseMySql(Connection));
-
             services.AddMvc();
             services.AddDistributedMemoryCache();
             services.AddSession();
 
+            var Connection = Configuration["ConexaoMySql:MySqlConnectionString"];
+
+            services.AddDbContext<ApplicationContext>(op => op.UseMySql(Connection));
+            
             services.AddTransient<IDataService, DataService>();
             services.AddTransient<IProdutoRepository, ProdutoRepository>();
             services.AddTransient<IPedidoRepository, PedidoRepository>();

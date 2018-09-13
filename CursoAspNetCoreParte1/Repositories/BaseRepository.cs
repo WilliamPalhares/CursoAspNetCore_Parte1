@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CursoAspNetCoreParte1.Repositories
 {
-    public class BaseRepository<T> where T : BaseModel
+    public abstract class BaseRepository<T> where T : BaseModel
     {
         protected readonly DbSet<T> dbSet;
         protected readonly ApplicationContext context;

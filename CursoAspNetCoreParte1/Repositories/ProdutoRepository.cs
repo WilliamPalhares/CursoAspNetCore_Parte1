@@ -13,7 +13,7 @@ namespace CursoAspNetCoreParte1.Repositories
         {
         }
 
-        public IEnumerable<Produto> GetProduto()
+        public IList<Produto> GetProduto()
         {
             return dbSet.ToList();
         }
