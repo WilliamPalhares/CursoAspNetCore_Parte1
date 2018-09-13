@@ -50,7 +50,8 @@ namespace CursoAspNetCoreParte1.Controllers
 
         public IActionResult Resumo()
         {
-            return View();
+            Pedido pedido = pedidoRepository.GetPedido();
+            return View(pedido);
         }
     }
 }
