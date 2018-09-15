@@ -47,5 +47,11 @@ namespace CursoAspNetCoreParte1.Controllers
             Pedido pedido = pedidoRepository.GetPedido();
             return View(pedido);
         }
+
+        [HttpPost]
+        public void UpdateQuantidade(ItemPedido itemPedido)
+        {
+
+        }
     }
 }
