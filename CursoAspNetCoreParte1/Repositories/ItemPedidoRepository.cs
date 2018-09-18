@@ -11,5 +11,16 @@ namespace CursoAspNetCoreParte1.Repositories
         public ItemPedidoRepository(ApplicationContext context) : base(context)
         {
         }
+
+        public void UpdateQuantidade(ItemPedido itemPedido)
+        {
+            var itemPedidoDB = dbSet.Where(ip => ip.Id == itemPedido.Id).SingleOrDefault();
+
+            if (!Equals(itemPedidoDB, null))
+            {
+                itemPedidoDB.AtualizaQuantidade(itemPedido.Quantidade);
+                context.SaveChanges();
+            }
+        }
     }
 }
